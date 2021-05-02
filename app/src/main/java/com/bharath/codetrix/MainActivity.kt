@@ -1,13 +1,13 @@
-package com.example.codetrix
+package com.bharath.codetrix
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
-import com.example.codetrix.ui.main.AlbumModel
-import com.example.codetrix.ui.main.MainActivityViewModel
-import com.example.codetrix.ui.main.SectionsPagerAdapter
+import com.bharath.codetrix.ui.main.AlbumModel
+import com.bharath.codetrix.ui.main.MainActivityViewModel
+import com.bharath.codetrix.ui.main.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
 
 /**

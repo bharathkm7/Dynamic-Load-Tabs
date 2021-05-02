@@ -1,4 +1,4 @@
-package com.example.codetrix.ui.main
+package com.bharath.codetrix.ui.main
 
 import android.content.Context
 import androidx.fragment.app.Fragment

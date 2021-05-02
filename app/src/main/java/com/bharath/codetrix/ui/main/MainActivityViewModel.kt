@@ -1,4 +1,4 @@
-package com.example.codetrix.ui.main
+package com.bharath.codetrix.ui.main
 
 import android.util.Log
 import androidx.lifecycle.LiveData

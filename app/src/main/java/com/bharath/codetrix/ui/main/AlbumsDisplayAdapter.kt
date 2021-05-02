@@ -1,4 +1,4 @@
-package com.example.codetrix.ui.main
+package com.bharath.codetrix.ui.main
 
 import android.content.Context
 import android.view.View
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.bharath.codetrix.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.load.model.LazyHeaders
-import com.example.codetrix.R
 
 /**
  * Created by Bharath KM on 2/5/21.
@@ -38,8 +38,7 @@ class AlbumsDisplayAdapter(
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
 
-        var gridView: View? = null
-
+        val gridView: View?
 
         gridView = inflate(mContext, R.layout.grid_item, null)
 
