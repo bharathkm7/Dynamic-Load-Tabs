@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bharath.codeJournals.R
 import com.bharath.codeJournals.adapter.AlbumsDisplayAdapter
-import com.bharath.codeJournals.model.AlbumModel
+import com.bharath.codeJournals.model.AlbumsModel
 import com.bharath.codeJournals.viewModel.MainActivityViewModel
 import com.bharath.codeJournals.viewModel.PageViewModel
 
@@ -21,7 +20,7 @@ class PlaceholderFragment : Fragment() {
 
     private lateinit var pageViewModel: PageViewModel
     private lateinit var gridView: GridView
-    private lateinit var albumsList: List<AlbumModel>
+    private lateinit var albumsList: List<AlbumsModel>
     private lateinit var mainActivityViewModel: MainActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +30,7 @@ class PlaceholderFragment : Fragment() {
         pageViewModel = ViewModelProvider(this).get(PageViewModel::class.java).apply {
             setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: 1)
         }
-        albumsList = arguments?.getParcelableArrayList<AlbumModel>(ALBUMS_LIST)!!
+        albumsList = arguments?.getParcelableArrayList<AlbumsModel>(ALBUMS_LIST)!!
     }
 
     override fun onCreateView(
@@ -47,8 +46,8 @@ class PlaceholderFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mainActivityViewModel.getAlbumDetails(arguments?.getInt(ARG_SECTION_NUMBER).toString())
-        mainActivityViewModel.dataModelObject2.observe(this, Observer {
-            gridView.adapter = AlbumsDisplayAdapter(activity!!,albumsList,it)
+        mainActivityViewModel.dataModelObject2.observe(this, {
+            gridView.adapter = AlbumsDisplayAdapter(activity!!, albumsList, it)
         })
     }
 
@@ -57,7 +56,10 @@ class PlaceholderFragment : Fragment() {
         private const val ALBUMS_LIST = "albums_list"
 
         @JvmStatic
-        fun newInstance(sectionNumber: Int,albumsList: ArrayList<AlbumModel>): PlaceholderFragment {
+        fun newInstance(
+            sectionNumber: Int,
+            albumsList: ArrayList<AlbumsModel>
+        ): PlaceholderFragment {
             return PlaceholderFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)

@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bharath.codeJournals.R
 import com.bharath.codeJournals.model.AlbumDetailsModel
-import com.bharath.codeJournals.model.AlbumModel
+import com.bharath.codeJournals.model.AlbumsModel
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.load.model.LazyHeaders
@@ -19,12 +19,12 @@ import com.bumptech.glide.load.model.LazyHeaders
  */
 class AlbumsDisplayAdapter(
     c: Context,
-    albums: List<AlbumModel>,
+    albums: List<AlbumsModel>,
     albumDetails: List<AlbumDetailsModel>,
 ) : BaseAdapter() {
     private val mContext: Context
     private var mAlbumDetails: List<AlbumDetailsModel>? = null
-    private var mAlbums:List<AlbumModel>? = null
+    private var mAlbums: List<AlbumsModel>? = null
 
     override fun getCount(): Int {
         return mAlbumDetails!!.size

@@ -4,9 +4,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.bharath.codeJournals.api.KbApiService
+import com.bharath.codeJournals.api.ApiService
 import com.bharath.codeJournals.model.AlbumDetailsModel
-import com.bharath.codeJournals.model.AlbumModel
+import com.bharath.codeJournals.model.AlbumsModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
@@ -17,20 +17,20 @@ import io.reactivex.schedulers.Schedulers
  */
 class MainActivityViewModel: ViewModel() {
 
-    private val kbApiService = KbApiService()
+    private val kbApiService = ApiService()
     private val disposable = CompositeDisposable()
-    private val _dataModelObject = MutableLiveData<List<AlbumModel>>()
-    val dataModelObject: LiveData<List<AlbumModel>> = _dataModelObject
+    private val _dataModelObject = MutableLiveData<List<AlbumsModel>>()
+    val dataModelObject: LiveData<List<AlbumsModel>> = _dataModelObject
     private val _dataModelObject2 = MutableLiveData<List<AlbumDetailsModel>>()
     val dataModelObject2: LiveData<List<AlbumDetailsModel>> = _dataModelObject2
 
-    fun getAlbums(){
+    fun getAlbums() {
         disposable.add(
             kbApiService.getAlbums()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<List<AlbumModel>>() {
-                    override fun onSuccess(latestStats: List<AlbumModel>) {
+                .subscribeWith(object : DisposableSingleObserver<List<AlbumsModel>>() {
+                    override fun onSuccess(latestStats: List<AlbumsModel>) {
                         if (latestStats.isNullOrEmpty().not()) _dataModelObject.value = latestStats
                     }
 

@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * Created by Bharath KM on 2/5/21.
  */
-class AlbumModel() : Parcelable {
+class AlbumsModel() : Parcelable {
     @SerializedName("userId")
     @Expose
     private var userId: Int? = null
@@ -62,12 +62,12 @@ class AlbumModel() : Parcelable {
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<AlbumModel> {
-        override fun createFromParcel(parcel: Parcel): AlbumModel {
-            return AlbumModel(parcel)
+    companion object CREATOR : Parcelable.Creator<AlbumsModel> {
+        override fun createFromParcel(parcel: Parcel): AlbumsModel {
+            return AlbumsModel(parcel)
         }
 
-        override fun newArray(size: Int): Array<AlbumModel?> {
+        override fun newArray(size: Int): Array<AlbumsModel?> {
             return arrayOfNulls(size)
         }
     }

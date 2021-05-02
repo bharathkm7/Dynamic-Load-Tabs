@@ -1,7 +1,7 @@
 package com.bharath.codeJournals.api
 
 import com.bharath.codeJournals.model.AlbumDetailsModel
-import com.bharath.codeJournals.model.AlbumModel
+import com.bharath.codeJournals.model.AlbumsModel
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 /**
  * Created by Bharath KM on 2/5/21.
  */
-class KbApiService {
+class ApiService {
     val BASE_URL = "https://jsonplaceholder.typicode.com/"
 
     private val api = Retrofit.Builder()
@@ -18,9 +18,9 @@ class KbApiService {
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build()
-        .create(KbApiInterface::class.java)
+        .create(ApiInterface::class.java)
 
-    fun getAlbums(): Single<List<AlbumModel>> {
+    fun getAlbums(): Single<List<AlbumsModel>> {
         return api.getAlbumDetails()
     }
 
