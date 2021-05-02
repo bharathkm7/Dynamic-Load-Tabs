@@ -1,4 +1,4 @@
-package com.bharath.codetrix.ui.main
+package com.bharath.codeJournals.adapter
 
 import android.content.Context
 import android.view.View
@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.bharath.codetrix.R
+import com.bharath.codeJournals.R
+import com.bharath.codeJournals.model.AlbumDetailsModel
+import com.bharath.codeJournals.model.AlbumModel
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.load.model.LazyHeaders

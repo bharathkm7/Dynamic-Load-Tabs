@@ -1,9 +1,12 @@
-package com.bharath.codetrix.ui.main
+package com.bharath.codeJournals.viewModel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.bharath.codeJournals.api.KbApiService
+import com.bharath.codeJournals.model.AlbumDetailsModel
+import com.bharath.codeJournals.model.AlbumModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver

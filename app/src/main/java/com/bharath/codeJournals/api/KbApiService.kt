@@ -1,5 +1,7 @@
-package com.bharath.codetrix.ui.main
+package com.bharath.codeJournals.api
 
+import com.bharath.codeJournals.model.AlbumDetailsModel
+import com.bharath.codeJournals.model.AlbumModel
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

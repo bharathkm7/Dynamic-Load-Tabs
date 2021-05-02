@@ -1,4 +1,4 @@
-package com.bharath.codetrix.ui.main
+package com.bharath.codeJournals.model
 
 import android.os.Parcel
 import android.os.Parcelable

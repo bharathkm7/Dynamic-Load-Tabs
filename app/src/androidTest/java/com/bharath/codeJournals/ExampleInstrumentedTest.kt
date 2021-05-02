@@ -1,4 +1,4 @@
-package com.bharath.codetrix
+package com.bharath.codeJournals
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

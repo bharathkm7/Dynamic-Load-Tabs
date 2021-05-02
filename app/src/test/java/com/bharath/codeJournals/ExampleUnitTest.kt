@@ -1,4 +1,4 @@
-package com.bharath.codetrix
+package com.bharath.codeJournals
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,13 +1,14 @@
-package com.bharath.codetrix
+package com.bharath.codeJournals.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
-import com.bharath.codetrix.ui.main.AlbumModel
-import com.bharath.codetrix.ui.main.MainActivityViewModel
-import com.bharath.codetrix.ui.main.SectionsPagerAdapter
+import com.bharath.codeJournals.R
+import com.bharath.codeJournals.adapter.SectionsPagerAdapter
+import com.bharath.codeJournals.model.AlbumModel
+import com.bharath.codeJournals.viewModel.MainActivityViewModel
 import com.google.android.material.tabs.TabLayout
 
 /**

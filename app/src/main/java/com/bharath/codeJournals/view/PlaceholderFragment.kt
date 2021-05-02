@@ -1,4 +1,4 @@
-package com.bharath.codetrix.ui.main
+package com.bharath.codeJournals.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,11 @@ import android.widget.GridView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.bharath.codetrix.R
+import com.bharath.codeJournals.R
+import com.bharath.codeJournals.adapter.AlbumsDisplayAdapter
+import com.bharath.codeJournals.model.AlbumModel
+import com.bharath.codeJournals.viewModel.MainActivityViewModel
+import com.bharath.codeJournals.viewModel.PageViewModel
 
 /**
  * Created by Bharath KM on 2/5/21.

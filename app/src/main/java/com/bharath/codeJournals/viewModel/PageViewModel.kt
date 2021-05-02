@@ -1,4 +1,4 @@
-package com.bharath.codetrix.ui.main
+package com.bharath.codeJournals.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
