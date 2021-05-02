@@ -44,14 +44,11 @@ class AlbumsDisplayAdapter(
 
         gridView = inflate(mContext, R.layout.grid_item, null)
 
-        //tablayout tab text
-//        MainActivity.tabs?.getTabAt(position)?.text = mAlbums?.get(position)?.getTitle()
-
-        // title
+        // set title
         val textView = gridView.findViewById<View>(R.id.grid_item_text) as TextView
         textView.text = mAlbumDetails!![position].getTitle()
 
-        //image
+        // set image
         val imageView = gridView.findViewById<View>(R.id.grid_item_image) as ImageView
         val url = GlideUrl(
             mAlbumDetails!![position].getThumbnailUrl()?.trim(), LazyHeaders.Builder()
